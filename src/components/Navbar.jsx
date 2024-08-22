@@ -1,17 +1,21 @@
-// src/components/Navbar.js
+// src/components/Navbar.jsx
 import React from 'react';
-import { FaHome } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className="bg-blue-700 p-4">
+    <nav className="bg-blue-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <a href="/" className="text-white text-xl font-bold flex items-center">
-          <FaHome className="mr-2" /> Event Organizer
-        </a>
+        <Link to="/" className="text-white text-2xl font-bold">
+          Event Organizer
+        </Link>
         <div>
-          <a href="/" className="text-white ml-4 hover:underline">Home</a>
-          <a href="/create-event" className="text-white ml-4 hover:underline">Create Event</a>
+          <Link to="/" className="text-white mr-4">
+            Home
+          </Link>
+          <Link to="/create" className="bg-white text-blue-800 py-2 px-4 rounded">
+            Add Event
+          </Link>
         </div>
       </div>
     </nav>
